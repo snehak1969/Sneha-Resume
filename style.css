@@ -58,7 +58,7 @@ body {
   margin: 0.25rem 0 0.5rem 0;
 }
 
-.contact-links a {
+80 a {
   background: var(--accent);
   color: #fff;
   margin-right: 0.7rem;
@@ -594,6 +594,7 @@ footer {
   }
 
   .contact-links {
+      display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 0.5rem;
@@ -602,6 +603,7 @@ footer {
   .contact-links a {
     padding: 0.4rem 0.8rem;
     font-size: 0.85rem;
+      white-space: nowrap;
   }
 
   nav ul.scroll-menu {
