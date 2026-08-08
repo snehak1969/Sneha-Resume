@@ -3,217 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sneha K | QA Tester | Quality Assurance Professional</title>
+    <title>Sneha K | QA Engineer | SDET</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="profile">
-                <img src="./IMG_20230604_115021 (1).jpg" alt="Sneha Acharya" class="avatar">                    <h1>Sneha K</h1>
-                    <p class="subtitle">Quality Assurance Tester | Software Quality Assurance Specialist</p>
-                    <p class="location"><span>📍</span>Bangalore, India</p>
-                    <div class="contact-links">
-                        <a href="tel:9113211958">📞 9113211958</a>
-                        <a href="mailto:snehakacharya19@gmail.com">📧 snehakacharya19@gmail.com</a>
-                        <a href="https://github.com/snehakacharya" target="_blank">💻 GitHub</a>
-                        <a href="https://www.linkedin.com/in/snehika-acharya" target="_blank">🔗 LinkedIn</a>
-                        <a href="https://drive.google.com/drive/folders/1EdE6CQj6-V3DUoptGA80F6fFbGy7n68f" download><button class="download-btn">⬇️ Download Resume (PDF)</button></a>
-                    </div>
-                </div>
+    <div id="scroll-progress" class="scroll-progress"></div>
+
+    <header class="hero">
+        <div class="terminal-window reveal">
+            <div class="terminal-bar">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="terminal-title">sneha@qa-portfolio: ~</span>
             </div>
+            <div class="terminal-body">
+                <p><span class="prompt">sneha@qa:~$</span> whoami</p>
+                <p class="whoami">Sneha K</p>
+                <p class="whoami-sub"><span id="typed-line"></span><span class="cursor">▊</span></p>
+                <p><span class="prompt">sneha@qa:~$</span> cat about.txt</p>
+                <p class="about-text">QA Engineer with <span class="hl-green">3 years</span> of experience in automation &amp; manual testing for <span class="hl-green">web and mobile applications</span>. Skilled in Playwright, Selenium, Robot Framework, API testing, PostgreSQL &amp; performance testing.</p>
+                <p><span class="prompt">sneha@qa:~$</span> ./contact.sh</p>
+                <p class="contact-line">
+                    <a href="tel:+919113211958">+91 9113211958</a>
+                    <a href="mailto:snehakacharya3@gmail.com">snehakacharya3@gmail.com</a>
+                    <a href="https://github.com/snehakacharya" target="_blank">github.com/snehakacharya</a>
+                    <a href="https://www.linkedin.com/in/snehika-acharya" target="_blank">linkedin.com/in/snehika-acharya</a>
+                </p>
+                <p><span class="prompt">sneha@qa:~$</span> <span class="cursor">▊</span></p>
+            </div>
+        </div>
+        <div class="hero-cta reveal">
+            <a class="download-btn" href="https://drive.google.com/uc?export=download&id=1dqzZ7bA-74FoiZ8m24lrhu9dqI59Y3NG">⬇ download_resume.pdf</a>
         </div>
     </header>
 
-    <nav>
-        <ul class="scroll-menu">
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#skills">Skills & Tools</a></li>
-            <li><a href="#expertise">QA Expertise</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#certifications">Certifications</a></li>
-        </ul>
+    <nav class="cmd-menu">
+        <a href="#summary">~/summary</a>
+        <a href="#experience">~/experience</a>
+        <a href="#skills">~/skills</a>
+        <a href="#expertise">~/expertise</a>
+        <a href="#education">~/education</a>
+        <a href="#certifications">~/certifications</a>
     </nav>
 
     <main>
+        <section id="summary" class="section">
+            <h2 class="sec-title"><span class="t-green">$</span> cat summary.txt <span class="t-cyan"># professional summary</span></h2>
+            <div class="glass-card reveal">
+                <p>QA Engineer with <strong>3 years</strong> of experience in <strong>automation and manual testing</strong> for web and mobile applications. Skilled in <strong>Playwright, Selenium, Robot Framework, API testing, PostgreSQL, and performance testing</strong> with hands-on experience in <strong>Agile environments</strong>.</p>
+                <p class="muted">// open to QA Engineer, SDET &amp; Test Automation roles</p>
+            </div>
+        </section>
+
         <section id="experience" class="section">
-            <h2>🧪 Professional Experience</h2>
-            <div class="card" onclick="openPopup('popup-experience')">
-                <h3>MyGate <span class="jobdate">Sept 2023 - Present (2+ Years)</span></h3>
-                <p class="position">Software Quality Test Engineer</p>
-                <ul>
-                    <li><strong>Manual & Automated Testing:</strong> Expertise in both manual and automated testing approaches for comprehensive software quality assurance</li>
-                    <li><strong>Selenium Automation:</strong> Designed and executed automated test scripts using Selenium WebDriver, achieving 70% test coverage and reducing regression testing time by 60%</li>
-                    <li><strong>Test Case Design & Execution:</strong> Created 200+ detailed test cases with comprehensive coverage of functional, integration, and system testing scenarios</li>
-                    <li><strong>Bug Tracking & Reporting:</strong> Documented and tracked 150+ defects using bug tracking tools with detailed reproduction steps, priority levels, and severity classification</li>
-                    <li><strong>Quality Assurance Methodology:</strong> Implemented QA best practices including test-driven quality assurance, test planning, and risk-based testing strategies</li>
-                    <li><strong>Cross-Browser & Device Testing:</strong> Performed comprehensive testing across multiple browsers (Chrome, Firefox, Safari, Edge) and devices to ensure application consistency</li>
-                    <li><strong>Database Testing:</strong> Validated database integrity, query performance, and data consistency using SQL for backend testing</li>
-                    <li><strong>Performance & Load Testing:</strong> Assisted in identifying performance bottlenecks and ensuring optimal application response times</li>
-                </ul>
+            <h2 class="sec-title"><span class="t-green">$</span> history <span class="t-cyan"># experience</span></h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="glass-card reveal">
+                        <div class="tl-head">
+                            <h3>Sechpoint</h3>
+                            <span class="jobdate">Feb 2026 - Present</span>
+                        </div>
+                        <p class="position">Software Development Engineer in Test (SDET)</p>
+                        <ul>
+                            <li>Developed <strong>Playwright</strong> automation scripts for sanity and regression testing</li>
+                            <li>Created database automation scripts for <strong>PostgreSQL</strong> validation and stress testing</li>
+                            <li>Analyzed system latency, throughput, and concurrent database connections</li>
+                            <li>Evaluated application stability and validated performance under heavy load conditions</li>
+                            <li>Participated in sanity, regression, and integration testing activities</li>
+                            <li>Developed and maintained automation test scripts using Robot Framework and Selenium</li>
+                            <li>Worked closely with cross-functional teams for defect tracking and issue validation</li>
+                            <li>Integrated automation suites with <strong>Jenkins</strong> for scheduled sanity and regression execution</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="glass-card reveal">
+                        <div class="tl-head">
+                            <h3>MyGate</h3>
+                            <span class="jobdate">Sep 2023 - Jan 2026</span>
+                        </div>
+                        <p class="position">Quality Assurance Engineer</p>
+                        <p class="muted">Enterprise ERP platform for urban community management</p>
+                        <ul>
+                            <li>Designed and executed test cases for ERP workflows across web and mobile applications</li>
+                            <li>Validated billing systems, approval workflows, and role-based access functionalities</li>
+                            <li>Performed API testing using Postman and validated backend data using SQL queries</li>
+                            <li>Developed and automated <strong>80+ regression test cases</strong> using Selenium, reducing manual testing efforts</li>
+                            <li>Conducted performance testing using <strong>JMeter</strong> to analyze application stability under load</li>
+                            <li>Collaborated with developers and product teams in Agile sprint cycles</li>
+                            <li>Worked on keyword-driven automation testing using <strong>Robot Framework</strong></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section id="skills" class="section">
-            <h2>🛠️ Testing Tools & Technologies</h2>
-            <div class="card" onclick="openPopup('popup-skills')">
-                <h3>Testing Frameworks & Tools</h3>
-                <ul>
-                    <li><strong>Test Automation Tools:</strong> Selenium WebDriver, Selenium IDE, TestNG, JUnit</li>
-                    <li><strong>Testing Methodologies:</strong> Manual Testing, Automation Testing, Regression Testing, Smoke Testing, Sanity Testing</li>
-                    <li><strong>Bug Tracking & Management:</strong> Jira, Azure Test Manager, Bug Tracking Systems</li>
-                    <li><strong>Test Management:</strong> TestRail, Test Case Management, Test Execution Tracking</li>
-                    <li><strong>Databases:</strong> SQL, MySQL, Database Query Testing</li>
-                    <li><strong>Scripting Languages:</strong> Java, Python (for test automation)</li>
-                    <li><strong>Version Control:</strong> Git, GitHub</li>
-                    <li><strong>Cloud Platforms:</strong> AWS, Google Cloud Platform (for cloud-based testing)</li>
-                    <li><strong>Browsers & Tools:</strong> Chrome DevTools, Firefox Developer Tools, Postman (API Testing)</li>
-                </ul>
+            <h2 class="sec-title"><span class="t-green">$</span> stack <span class="t-cyan"># skills &amp; tools</span></h2>
+            <div class="glass-card skills-block reveal">
+                <div class="skill-group">
+                    <h3>// automation</h3>
+                    <div class="skill"><span class="skill-name">Playwright</span><div class="skill-track"><span class="bar" data-level="95"></span></div></div>
+                    <div class="skill"><span class="skill-name">Selenium WebDriver</span><div class="skill-track"><span class="bar" data-level="90"></span></div></div>
+                    <div class="skill"><span class="skill-name">Robot Framework</span><div class="skill-track"><span class="bar" data-level="85"></span></div></div>
+                    <div class="skill"><span class="skill-name">TestNG</span><div class="skill-track"><span class="bar" data-level="80"></span></div></div>
+                </div>
+                <div class="skill-group">
+                    <h3>// api &amp; performance</h3>
+                    <div class="skill"><span class="skill-name">REST API Testing</span><div class="skill-track"><span class="bar" data-level="85"></span></div></div>
+                    <div class="skill"><span class="skill-name">Postman</span><div class="skill-track"><span class="bar" data-level="90"></span></div></div>
+                    <div class="skill"><span class="skill-name">JMeter</span><div class="skill-track"><span class="bar" data-level="80"></span></div></div>
+                    <div class="skill"><span class="skill-name">LoadRunner</span><div class="skill-track"><span class="bar" data-level="70"></span></div></div>
+                </div>
+                <div class="skill-group">
+                    <h3>// programming &amp; database</h3>
+                    <div class="skill"><span class="skill-name">Python</span><div class="skill-track"><span class="bar" data-level="85"></span></div></div>
+                    <div class="skill"><span class="skill-name">Java</span><div class="skill-track"><span class="bar" data-level="80"></span></div></div>
+                    <div class="skill"><span class="skill-name">PostgreSQL / SQL</span><div class="skill-track"><span class="bar" data-level="85"></span></div></div>
+                    <div class="skill"><span class="skill-name">JavaScript</span><div class="skill-track"><span class="bar" data-level="70"></span></div></div>
+                </div>
+                <div class="skill-group">
+                    <h3>// tools &amp; cloud</h3>
+                    <div class="skill"><span class="skill-name">Git</span><div class="skill-track"><span class="bar" data-level="85"></span></div></div>
+                    <div class="skill"><span class="skill-name">Jenkins</span><div class="skill-track"><span class="bar" data-level="80"></span></div></div>
+                    <div class="skill"><span class="skill-name">AWS</span><div class="skill-track"><span class="bar" data-level="80"></span></div></div>
+                    <div class="skill"><span class="skill-name">JIRA</span><div class="skill-track"><span class="bar" data-level="85"></span></div></div>
+                </div>
             </div>
         </section>
 
         <section id="expertise" class="section">
-            <h2>✨ QA Expertise & Core Competencies</h2>
-            <div class="card" onclick="openPopup('popup-expertise')">
-                <h3>Quality Assurance Specializations</h3>
-                <ul>
-                    <li><strong>Functional Testing:</strong> Comprehensive testing of software features, functionalities, and user workflows</li>
-                    <li><strong>Integration Testing:</strong> Validating interactions between different system components and modules</li>
-                    <li><strong>System Testing:</strong> End-to-end testing of complete software systems for compliance with requirements</li>
-                    <li><strong>User Acceptance Testing (UAT):</strong> Coordinating and executing UAT scenarios with stakeholders</li>
-                    <li><strong>API Testing:</strong> Testing RESTful APIs for functionality, security, and performance using Postman</li>
-                    <li><strong>Performance Testing:</strong> Identifying bottlenecks and optimizing application performance</li>
-                    <li><strong>Security Testing:</strong> Basic security vulnerability testing and secure coding practices validation</li>
-                    <li><strong>Test Case Documentation:</strong> Creating detailed, well-organized test cases with clear expected results</li>
-                    <li><strong>Defect Life Cycle Management:</strong> Managing bugs from identification through resolution and verification</li>
-                    <li><strong>Test Planning & Strategy:</strong> Developing comprehensive test plans aligned with project requirements and timelines</li>
-                    <li><strong>Cross-Functional Collaboration:</strong> Working effectively with developers, product managers, and stakeholders</li>
-                    <li><strong>Agile/Scrum Methodologies:</strong> Participating in Agile sprints and adapting to iterative testing approaches</li>
-                </ul>
+            <h2 class="sec-title"><span class="t-green">$</span> ls testing/ <span class="t-cyan"># expertise</span></h2>
+            <div class="chips reveal">
+                <span class="chip">[functional]</span>
+                <span class="chip">[regression]</span>
+                <span class="chip">[integration]</span>
+                <span class="chip">[cross-browser]</span>
+                <span class="chip">[mobile testing]</span>
+                <span class="chip">[api testing]</span>
+                <span class="chip">[performance]</span>
+                <span class="chip">[agile scrum]</span>
+                <span class="chip">[sdlc]</span>
+                <span class="chip">[stlc]</span>
+                <span class="chip">[pom framework]</span>
+                <span class="chip">[data-driven]</span>
+                <span class="chip">[defect management]</span>
             </div>
         </section>
 
         <section id="education" class="section">
-            <h2>🎓 Education</h2>
-            <div class="card" onclick="openPopup('popup-education')">
+            <h2 class="sec-title"><span class="t-green">$</span> cat education.txt <span class="t-cyan"># education</span></h2>
+            <div class="glass-card reveal">
                 <h3>Bachelor of Engineering - Computer Science</h3>
-                <p class="institution">New Horizon College of Engineering, Bangalore</p>
-                <p class="date">Jan 2021 - June 2023 | CGPA: 7.81/10</p>
-                <p>Strong foundation in computer science fundamentals, software development methodologies, and quality assurance principles</p>
-                
-                <h3>Diploma in Computer Science</h3>
-                <p class="institution">Ramaiah Polytechnic, Bangalore</p>
-                <p class="date">May 2017 - Dec 2020 | Score: 61.4%</p>
+                <p class="position">New Horizon College of Engineering, Bengaluru <span class="jobdate">2023</span></p>
+                <p class="muted">Strong foundation in computer science fundamentals, software development methodologies, and quality assurance principles</p>
             </div>
         </section>
 
         <section id="certifications" class="section">
-            <h2>🏆 Professional Certifications & Training</h2>
-            <div class="card" onclick="openPopup('popup-certifications')">
-                <ul>
-                    <li><strong>Cisco Networking Academy - Python Essentials (PCEP)</strong> | May 2023 - June 2023<br/>Foundational programming skills applicable to test automation scripting</li>
-                    <li><strong>Amazon Skill Builder - AWS Cloud Computing Practitioner</strong> | July 2023 - Sept 2023<br/>Cloud infrastructure knowledge for testing cloud-based applications</li>
-                    <li><strong>Full Stack Web Development Certification</strong> | June 2024<br/>Comprehensive understanding of web application architecture for effective QA testing</li>
+            <h2 class="sec-title"><span class="t-green">$</span> ls certs/ <span class="t-cyan"># certifications</span></h2>
+            <div class="glass-card reveal">
+                <ul class="cert-list">
+                    <li><span class="t-green">[✔]</span> AWS Certified Cloud Practitioner</li>
+                    <li><span class="t-green">[✔]</span> Python Certification - Cisco</li>
+                    <li><span class="t-green">[✔]</span> QA Automation Testing - Udemy</li>
+                    <li><span class="t-green">[✔]</span> SQL Certification - Udemy</li>
                 </ul>
             </div>
         </section>
     </main>
 
-    <!-- Popups -->
-    <div id="popup-experience" class="popup">
-        <div class="popup-content">
-            <span class="close" onclick="closePopup('popup-experience')">&times;</span>
-            <h2>QA Testing Experience at MyGate</h2>
-            <p><strong>Software Quality Test Engineer</strong> | 2+ Years</p>
-            <h3>Key Responsibilities:</h3>
-            <ul>
-                <li>Execute comprehensive test plans covering functional, integration, and system testing</li>
-                <li>Develop and maintain test automation scripts using Selenium WebDriver</li>
-                <li>Design detailed test cases with high coverage of business requirements</li>
-                <li>Track, document, and manage defects through complete life cycle</li>
-                <li>Perform cross-browser and device compatibility testing</li>
-                <li>Collaborate with development team for quick bug resolution</li>
-                <li>Participate in sprint planning and estimation for testing activities</li>
-                <li>Continuously improve QA processes and test automation</li>
-            </ul>
-        </div>
-    </div>
-
-    <div id="popup-skills" class="popup">
-        <div class="popup-content">
-            <span class="close" onclick="closePopup('popup-skills')">&times;</span>
-            <h2>Technical Skills & Testing Tools</h2>
-            <p><strong>Proficiency in Industry-Standard QA Tools:</strong></p>
-            <ul>
-                <li><strong>Selenium WebDriver:</strong> Expert level - Web automation testing</li>
-                <li><strong>TestNG:</strong> Advanced - Test framework and execution</li>
-                <li><strong>Jira:</strong> Expert - Bug tracking and project management</li>
-                <li><strong>SQL:</strong> Intermediate - Database validation testing</li>
-                <li><strong>Java/Python:</strong> Intermediate - Test script development</li>
-                <li><strong>Postman:</strong> Advanced - API testing and validation</li>
-                <li><strong>Git/GitHub:</strong> Proficient - Version control for test scripts</li>
-                <li><strong>Cloud Platforms:</strong> AWS, GCP - Cloud testing experience</li>
-            </ul>
-        </div>
-    </div>
-
-    <div id="popup-expertise" class="popup">
-        <div class="popup-content">
-            <span class="close" onclick="closePopup('popup-expertise')">&times;</span>
-            <h2>QA Expertise Areas</h2>
-            <h3>Testing Types:</h3>
-            <ul>
-                <li>Functional Testing - Feature and requirement validation</li>
-                <li>Regression Testing - Ensuring code changes don't break existing functionality</li>
-                <li>Smoke Testing - Quick sanity checks for build releases</li>
-                <li>Integration Testing - Component interaction validation</li>
-                <li>System Testing - End-to-end application testing</li>
-                <li>UAT Support - User acceptance testing coordination</li>
-                <li>API Testing - RESTful API functionality and security</li>
-                <li>Performance Testing - Load and stress testing</li>
-            </ul>
-            <h3>Quality Assurance Practices:</h3>
-            <ul>
-                <li>Test-Driven Quality Assurance</li>
-                <li>Risk-Based Testing Strategy</li>
-                <li>Continuous Integration & Deployment (CI/CD) Testing</li>
-                <li>Agile QA Practices</li>
-                <li>Defect Management & Analysis</li>
-                <li>Test Automation Best Practices</li>
-            </ul>
-        </div>
-    </div>
-
-    <div id="popup-education" class="popup">
-        <div class="popup-content">
-            <span class="close" onclick="closePopup('popup-education')">&times;</span>
-            <h2>Educational Background</h2>
-            <p><strong>Bachelor of Engineering in Computer Science</strong></p>
-            <p>New Horizon College of Engineering, Bangalore | 2021-2023 | CGPA: 7.81/10</p>
-            <p>Solid foundation in software development, system design, and quality assurance principles</p>
-            
-            <p><strong>Diploma in Computer Science</strong></p>
-            <p>Ramaiah Polytechnic, Bangalore | 2017-2020 | Score: 61.4%</p>
-            <p>Comprehensive training in computer fundamentals and programming</p>
-        </div>
-    </div>
-
-    <div id="popup-certifications" class="popup">
-        <div class="popup-content">
-            <span class="close" onclick="closePopup('popup-certifications')">&times;</span>
-            <h2>Professional Certifications</h2>
-            <ul>
-                <li><strong>Python Essentials (PCEP)</strong> - Cisco Networking Academy</li>
-                <li><strong>AWS Cloud Computing Practitioner</strong> - Amazon Skill Builder</li>
-                <li><strong>Full Stack Web Development</strong> - Comprehensive certification in web technologies</li>
-            </ul>
-            <p>These certifications provide a strong foundation for understanding software architecture and cloud-based application testing.</p>
-        </div>
-    </div>
-
     <footer>
-        <p>Made with ❤️ by Sneha K Acharya | QA Testing Professional | Last updated 2025</p>
+        <p><span class="prompt">sneha@qa:~$</span> echo "Made with ♥ by Sneha K Acharya"</p>
+        <p class="muted">// QA Engineer | SDET | 2026</p>
     </footer>
 </body>
 </html>
