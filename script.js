@@ -1,41 +1,76 @@
-// Scroll progress bar
 const progressBar = document.getElementById('scroll-progress');
-function updateProgress() {
+const header = document.getElementById('siteHeader');
+const toTop = document.getElementById('toTop');
+
+function onScroll() {
     const el = document.documentElement;
-    const scrolled = el.scrollTop / (el.scrollHeight - el.clientHeight);
+    const max = el.scrollHeight - el.clientHeight;
+    const scrolled = max > 0 ? el.scrollTop / max : 0;
+
     progressBar.style.width = (scrolled * 100) + '%';
+    header.classList.toggle('scrolled', el.scrollTop > 8);
+    toTop.classList.toggle('show', el.scrollTop > 500);
 }
-window.addEventListener('scroll', updateProgress, { passive: true });
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
 
-// Typewriter effect in hero
-const typeText = 'QA Engineer | SDET | Automation & Manual Testing';
-const typedEl = document.getElementById('typed-line');
-let idx = 0;
-function type() {
-    if (idx <= typeText.length) {
-        typedEl.textContent = typeText.slice(0, idx);
-        idx++;
-        setTimeout(type, 55);
-    }
+toTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+/* Mobile menu */
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.getElementById('navLinks');
+
+function closeMenu() {
+    navLinks.classList.remove('open');
+    menuToggle.classList.remove('open');
+    menuToggle.setAttribute('aria-expanded', 'false');
 }
 
-// Reveal on scroll + animate skill bars
+menuToggle.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    menuToggle.classList.toggle('open', isOpen);
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+});
+
+navLinks.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', closeMenu);
+});
+
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 960) closeMenu();
+});
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') closeMenu();
+});
+
+/* Reveal on scroll */
 const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
+    entries.forEach((entry) => {
         if (entry.isIntersecting) {
             entry.target.classList.add('visible');
-            if (entry.target.classList.contains('skills-block')) {
-                entry.target.querySelectorAll('.bar').forEach((bar, i) => {
-                    setTimeout(() => {
-                        bar.style.width = bar.dataset.level + '%';
-                    }, i * 120);
-                });
-            }
             revealObserver.unobserve(entry.target);
         }
     });
-}, { threshold: 0.12 });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
-document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
 
-window.addEventListener('load', () => setTimeout(type, 700));
+/* Active nav link */
+const navAnchors = Array.from(navLinks.querySelectorAll('a[href^="#"]'));
+const sections = navAnchors
+    .map((a) => document.querySelector(a.getAttribute('href')))
+    .filter(Boolean);
+
+const activeObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        navAnchors.forEach((a) => {
+            a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id);
+        });
+    });
+}, { rootMargin: '-45% 0px -50% 0px' });
+
+sections.forEach((section) => activeObserver.observe(section));
